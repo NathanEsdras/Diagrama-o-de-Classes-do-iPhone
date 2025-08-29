@@ -1,52 +1,9 @@
-classDiagram
-    %% Interfaces
-    class ReprodutorMusical {
-        +tocar()
-        +pausar()
-        +selecionarMusica(musica)
-    }
+Neste desafio, fiz o diagram do iPhone considerando suas principais funcionalidades:
 
-    class AparelhoTelefonico {
-        +ligar(numero)
-        +atender()
-        +iniciarCorreioVoz()
-    }
+Reprodutor Musical: tocar, pausar, selecionar música
 
-    class NavegadorInternet {
-        +exibirPagina(url)
-        +adicionarNovaAba()
-        +atualizarPagina()
-    }
+Aparelho Telefônico: ligar, atender, correio de voz
 
-    %% Classe iPhone
-    class iPhone {
-        -String modelo
-        -int armazenamentoGB
-        -int bateriaPorcentagem
-        -String sistemaOperacional
-       
-      
-    }
+Navegador na Internet: exibir página, adicionar aba, atualizar página
 
-    %% Composição de componentes
-    class Bateria {
-        -int porcentagem
-        +carregar()
-        +consumir()
-    }
-
-    class Armazenamento {
-        -int capacidadeGB
-        -int usadoGB
-        +salvarArquivo(nomeArquivo)
-        +apagarArquivo(nomeArquivo)
-    }
-
-    %% Relacionamentos
-    iPhone ..|> ReprodutorMusical
-    iPhone ..|> AparelhoTelefonico
-    iPhone ..|> NavegadorInternet
-
-    iPhone *-- Bateria : 
-    iPhone *-- Armazenamento : 
-
+Criei interfaces UML para cada funcionalidade e a classe iPhone que as implementa, adicionando atributos como modelo, bateria e armazenamento. O diagrama foi feito em Mermaid e está pronto para visualização no GitHub.
